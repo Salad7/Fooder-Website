@@ -1,5 +1,54 @@
 <!DOCTYPE html>
 <html>
+    
+<script src="https://www.gstatic.com/firebasejs/3.6.10/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/3.6.10/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/3.6.10/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/3.6.10/firebase-messaging.js"></script>
+<script src="https://www.gstatic.com/firebasejs/3.6.10/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  // TODO: Replace with your project's customized code snippet
+  var config = {
+    apiKey: "AIzaSyDGzmVSGmK_DgnWJy3Y4_Qe1Qa3rlYbmQc",
+    authDomain: " niner-demo.firebaseapp.com",
+    databaseURL: "https://niner-demo.firebaseio.com",
+    //storageBucket: "<BUCKET>.appspot.com",
+    //messagingSenderId: "<SENDER_ID>",
+  };
+  firebase.initializeApp(config);
+  
+  
+ 
+  
+</script>
+
+<script>
+ var database = firebase.database();
+ var eventRefs = database.ref('niner-demo/').child('Events/');
+ var sizeOfDatabase = 15;
+ // var eventRef = eventRefs.push();
+  //console.log("user key", eventRef.key);
+ 
+database.ref('niner-demo/').child('Events/').on("value", function(snapshot) {
+  //console.log("There are "+snapshot.numChildren()+" messages");
+  sizeOfDatabase = snapshot.numChildren();
+  
+});
+
+writeUserData("20","test1","msalad1","@");
+
+  
+    function writeUserData(host, id, location, when, time, description) {
+
+  database.ref('niner-demo/').child('niner-demo/').set({
+    host: host,
+    when: when,
+    time: time
+  });
+  
+}
+</script>
 <body>
 
 <form action="/created.html">
