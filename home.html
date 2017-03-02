@@ -26,25 +26,29 @@
 <script>
  var database = firebase.database();
  var eventRefs = database.ref('niner-demo/').child('Events/');
- var sizeOfDatabase = 15;
+ var sizeOfDatabase = 0;
  // var eventRef = eventRefs.push();
   //console.log("user key", eventRef.key);
  
-database.ref('niner-demo/').child('Events/').on("value", function(snapshot) {
-  //console.log("There are "+snapshot.numChildren()+" messages");
+eventRefs.on("value", function(snapshot) {
+  console.log("There are "+snapshot.numChildren()+" messages");
   sizeOfDatabase = snapshot.numChildren();
-  
+  console.log(sizeOfDatabase);
+  localStorage.numchildren = sizeOfDatabase;
 });
 
-writeUserData("20","test1","msalad1","@");
 
-  
+writeUserData("20","test1","msalad1","@","","");
+console.log(localStorage.getItem("lastname") + " Should not be undefined");
     function writeUserData(host, id, location, when, time, description) {
 
-  database.ref('niner-demo/').child('niner-demo/').set({
-    host: host,
+  database.ref('niner-demo/').child('Events/'+(localStorage.getItem("numchildren"))).set({
+    vendor: host,
     when: when,
-    time: time
+    time: time,
+    description:description,
+    id:id,
+    location:location
   });
   
 }
