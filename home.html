@@ -1,42 +1,52 @@
 <!DOCTYPE html>
+<html>
+
 <head>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/home.css">
     <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 </head>
 
-<html>
-<body>
-    <div class="body container-fluid">
-        <div class="container-fluid main center-block row">
-            <form action="/created.html">
-            <h1>Fooder</h1>
-              <fieldset>
-                <legend class="styled">Register an Event:</legend>
-                Host:<br>
-                <input type="text" name="firstname">
-                <br>
-                ID:<br>
-                <input type="text" name="ID">
-                <br>
-                Location:<br>
-                <input type="text" name="Location">
-                <br>
-                When:<br>
-                <input type="date" name="date">
-                <br>
-                Time:<br>
-                <input type="time" name="Time">
-                <br>
-                Description:<br>
-                <input class ="describe" type="text" name="lastname">
-                <br>
-                <input type="submit" value="Submit">
-              </fieldset>
-            </form>
+    <body>
+        <div class="body container-fluid">
+            <div class="container-fluid main center-block row">
+                <form action="/created.html">
+                <h1>Fooder</h1>
+                  <fieldset>
+                    <legend class="styled">Register an Event:</legend>
+                    Host:<br>
+                    <input type="text" name="firstname">
+                    <br>
+                    ID:<br>
+                    <input type="text" name="ID">
+                    <br>
+                    Location:<br>
+                    <input type="text" name="Location">
+                    <br>
+                    When:<br>
+                    <input type="date" name="date">
+                    <br>
+                    Time:<br>
+                    <input type="time" name="Time">
+                    <br>
+                    Description:<br>
+                    <input class ="describe" type="text" name="lastname">
+                    <br>
+                    <input type="submit" value="Submit">
+                  </fieldset>
+                </form>
+            </div>
         </div>
-    </div>
-</body>
-</html>
+    </body>
+
+    <script src=”js/writedata.js”></script>
+    <script src=”js/firebase.js”></script>
+
+    <script src="https://www.gstatic.com/firebasejs/3.6.10/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.6.10/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.6.10/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.6.10/firebase-messaging.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.6.10/firebase.js"></script>
+
+<html>
