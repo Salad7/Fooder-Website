@@ -3,7 +3,7 @@
 	align-content: center;
     display: flex;
     width: 425px;
-    height: 600px;
+    height: 225px;
 	background-color: green;
 	background-repeat: 
 	padding: 10px 10px 10px 10px;
@@ -13,43 +13,20 @@
 
 .main {
 	display: -webkit-flex;
-	align-items: center;
     width: 400px;
-    height: 575px;
-	padding: 10px 10px 10px 10px;
+    height: 200px;
+	padding: 5px 5px 5px 5px;
 	margin-top: 10px;
 	background-color: #fffecc;
 	border-radius: 5px;
 	resize: vertical;
 }
 
-.styled {
-	text-align: right;
-	align-content: right;
- 
-}
 
-.main hr {
-	border: 2px dotted #000000;
-}
-
-.main form h1 {
+.main h1 {
 	font-family: Lobster;
-	font-size: 50px;
+	font-size: 45px;
 	text-align: center;
-	font-weight: bold;
-}
-
-.main form h2 {
-	font-size: 24px;
-	text-align: center;
-	font-weight: bold;
-	padding-bottom: -10px;
-}
-
-.main form {
-	margin-left: 60px;
-	margin-right: -20px;
 }
 
 .describe {
@@ -61,24 +38,15 @@
    	white-space: normal;
     display: block;
 }
-fieldset {
-	font-size: 16px;
-	align-items: center;
-	padding: 2px 2px 2px 2px;
-}
-
-input {
-	width: 100%;
-    border: 1px solid;
-    border-radius: 4px;
-}
 
 input[type=submit] {
 	width: 30%;
     border: 1px solid;
-    border-radius: 5px;
-    margin-bottom: 5px;
-    padding-top: 5px;
+    border-color: black;
+    height: 25px;
+    border-radius: 2px;
+    margin-top: 30px;
+    margin-left: 10px;
     background: #7D7D15;
     color: #FFFFFF; 
     font-weight: bold;

@@ -12,7 +12,7 @@
  	var database = firebase.database();
  	var eventRefs = database.ref('niner-demo/').child('Events/');
  	var sizeOfDatabase = 0;
- 	// var eventRef = eventRefs.push();
+ 	//var eventRef = eventRefs.push();
   	//console.log("user key", eventRef.key);
  
 	eventRefs.on("value", function(snapshot) {

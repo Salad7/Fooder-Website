@@ -7,8 +7,8 @@ function writeUserData() {
       var locationIn;
 
 	x = document.getElementById("submitForm");
-	for( i= 0; i < x.length; i++){
-    	if(i==0)
+	for( i = 0; i < x.length; i++){
+    	if(i == 0)
    			vendorIn = x.elements[i].value;
     	else if(i == 1)
        		idIn = x.elements[i].value;
