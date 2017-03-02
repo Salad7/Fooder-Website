@@ -38,15 +38,15 @@ eventRefs.on("value", function(snapshot) {
 });
 
 
-writeUserData("20","test1","msalad1","@","","");
+writeUserData("USA","800821222","msalad1","11/11/2017","3:00PM - 7:00PM","dsadasdsdd");
 console.log(localStorage.getItem("lastname") + " Should not be undefined");
-    function writeUserData(host, id, location, when, time, description) {
+    function writeUserData(host, id, location, when, time, desc) {
 
   database.ref('niner-demo/').child('Events/'+(localStorage.getItem("numchildren"))).set({
     vendor: host,
     when: when,
     time: time,
-    description:description,
+    desc:desc,
     id:id,
     location:location
   });
