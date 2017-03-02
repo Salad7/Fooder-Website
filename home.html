@@ -1,117 +1,53 @@
 <!DOCTYPE html>
 <html>
-    
-<script src="https://www.gstatic.com/firebasejs/3.6.10/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/3.6.10/firebase-auth.js"></script>
-<script src="https://www.gstatic.com/firebasejs/3.6.10/firebase-database.js"></script>
-<script src="https://www.gstatic.com/firebasejs/3.6.10/firebase-messaging.js"></script>
-<script src="https://www.gstatic.com/firebasejs/3.6.10/firebase.js"></script>
-
-<script>
-  
-    function writeUserData() {
-      var vendorIn;
-      var whenIn;
-      var timeIn;
-      var descIn;
-      var idIn;
-      var locationIn;
-x = document.getElementById("submitForm");
-for( i= 0; i < x.length; i++){
-    if(i==0){
-   vendorIn = x.elements[i].value;
-    }else if(i == 1){
-       idIn = x.elements[i].value;
-    }else if(i == 2){
-       locationIn = x.elements[i].value;
-    }else if(i == 3){
-       whenIn= x.elements[i].value;
-    }else if(i == 4){
-       timeIn = x.elements[i].value;
-    }else if(i == 5){
-       descIn = x.elements[i].value;
-    }
-  }
-  console.log(vendorIn)
-   database.ref('niner-demo/').child('Events/'+(localStorage.getItem("numchildren"))).set({
-     vendor: vendorIn,
-     when: whenIn,
-     time: timeIn,
-     desc:descIn,
-     id:idIn,
-     location:locationIn
-   });
-  
-}
-  
-</script>
-<script>
-  // Initialize Firebase
-  // TODO: Replace with your project's customized code snippet
-  var config = {
-    apiKey: "AIzaSyDGzmVSGmK_DgnWJy3Y4_Qe1Qa3rlYbmQc",
-    authDomain: " niner-demo.firebaseapp.com",
-    databaseURL: "https://niner-demo.firebaseio.com",
-    //storageBucket: "<BUCKET>.appspot.com",
-    //messagingSenderId: "<SENDER_ID>",
-  };
-  firebase.initializeApp(config);
-  
-  
- 
-  
-</script>
-
-<body>
-
-<form id="submitForm" >
-
-    <legend>Event:</legend>
-    Host:<br>
-    <input type="text" name="firstname" id="fname">
-    <br>
-    ID:<br>
-    <input type="text" name="lastname">
-    <br>
-    Location:<br>
-    <input type="text" name="lastname">
-    <br>
-    When:<br>
-    <input type="date" name="date">
-    <br>
-    Time:<br>
-    <input type="time" name="lastname">
-    <br>
-    Description:<br>
-    <input type="text" name="lastname">
-    <br>
-    <input type="button" value="Submit" onClick="writeUserData()">
-</form>
 
 
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
 
-<script>
- var database = firebase.database();
- var eventRefs = database.ref('niner-demo/').child('Events/');
- var sizeOfDatabase = 0;
- // var eventRef = eventRefs.push();
-  //console.log("user key", eventRef.key);
- 
-eventRefs.on("value", function(snapshot) {
-  console.log("There are "+snapshot.numChildren()+" messages");
-  sizeOfDatabase = snapshot.numChildren();
-  console.log(sizeOfDatabase);
-  localStorage.numchildren = sizeOfDatabase;
-});
+    <body>
+        <div class="body container-fluid">
+            <div class="container-fluid main center-block row">
+                <form action="/created.html">
+                <h1>Fooder</h1>
+                  <fieldset>
+                    <legend class="styled">Register an Event:</legend>
+                    Host:<br>
+                    <input type="text" name="firstname">
+                    <br>
+                    ID:<br>
+                    <input type="text" name="ID">
+                    <br>
+                    Location:<br>
+                    <input type="text" name="Location">
+                    <br>
+                    When:<br>
+                    <input type="date" name="date">
+                    <br>
+                    Time:<br>
+                    <input type="time" name="Time">
+                    <br>
+                    Description:<br>
+                    <input class ="describe" type="text" name="lastname">
+                    <br>
+                    <input type="submit" value="Submit">
+                  </fieldset>
+                </form>
+            </div>
+        </div>
+    </body>
 
+    <script src=”js/writedata.js”></script>
+    <script src=”js/firebase.js”></script>
 
-//writeUserData("USA","800821222","msalad1","11/11/2017","3:00PM - 7:00PM","dsadasdsdd");
-var x = document.getElementById("submitForm");
-var host = document.getElementById("fname").value;
-//console.log("Host name is " +x.elements[0])
-console.log(localStorage.getItem("lastname") + " Should not be undefined");
+    <script src="https://www.gstatic.com/firebasejs/3.6.10/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.6.10/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.6.10/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.6.10/firebase-messaging.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.6.10/firebase.js"></script>
 
-
-</script>
-</body>
-</html>
+<html>
