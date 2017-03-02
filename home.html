@@ -6,6 +6,24 @@
 <script src="https://www.gstatic.com/firebasejs/3.6.10/firebase-database.js"></script>
 <script src="https://www.gstatic.com/firebasejs/3.6.10/firebase-messaging.js"></script>
 <script src="https://www.gstatic.com/firebasejs/3.6.10/firebase.js"></script>
+
+<script>
+  
+    function writeUserData() {
+console.log("data "+document.getElementById("submitForm").getElementsByTagName("fName").value);
+   database.ref('niner-demo/').child('Events/'+(localStorage.getItem("numchildren"))).set({
+    //console.log(localStorage.getItem("lastname") + " Should not be undefined");
+     vendor: document.getElementById("fName"),
+     when: document.getElementById("submitForm".elements[3].value),
+     time: document.getElementById("submitForm".elements[4].value),
+     desc:document.getElementById("submitForm".elements[5].value),
+     id:document.getElementById("submitForm".elements[1].value),
+     location:document.getElementById("submitForm".elements[2].value),
+   });
+  
+}
+  
+</script>
 <script>
   // Initialize Firebase
   // TODO: Replace with your project's customized code snippet
@@ -23,43 +41,13 @@
   
 </script>
 
-<script>
- var database = firebase.database();
- var eventRefs = database.ref('niner-demo/').child('Events/');
- var sizeOfDatabase = 0;
- // var eventRef = eventRefs.push();
-  //console.log("user key", eventRef.key);
- 
-eventRefs.on("value", function(snapshot) {
-  console.log("There are "+snapshot.numChildren()+" messages");
-  sizeOfDatabase = snapshot.numChildren();
-  console.log(sizeOfDatabase);
-  localStorage.numchildren = sizeOfDatabase;
-});
-
-
-writeUserData("USA","800821222","msalad1","11/11/2017","3:00PM - 7:00PM","dsadasdsdd");
-console.log(localStorage.getItem("lastname") + " Should not be undefined");
-    function writeUserData(host, id, location, when, time, desc) {
-
-  database.ref('niner-demo/').child('Events/'+(localStorage.getItem("numchildren"))).set({
-    vendor: host,
-    when: when,
-    time: time,
-    desc:desc,
-    id:id,
-    location:location
-  });
-  
-}
-</script>
 <body>
 
-<form action="/created.html">
-  <fieldset>
+<form id="submitForm" >
+
     <legend>Event:</legend>
     Host:<br>
-    <input type="text" name="firstname">
+    <input type="text" name="firstname" id="fname">
     <br>
     ID:<br>
     <input type="text" name="lastname">
@@ -76,9 +64,33 @@ console.log(localStorage.getItem("lastname") + " Should not be undefined");
     Description:<br>
     <input type="text" name="lastname">
     <br>
-    <input type="submit" value="Submit">
-  </fieldset>
+    <input type="button" value="Submit" onClick="writeUserData()">
 </form>
 
+
+
+<script>
+ var database = firebase.database();
+ var eventRefs = database.ref('niner-demo/').child('Events/');
+ var sizeOfDatabase = 0;
+ // var eventRef = eventRefs.push();
+  //console.log("user key", eventRef.key);
+ 
+eventRefs.on("value", function(snapshot) {
+  console.log("There are "+snapshot.numChildren()+" messages");
+  sizeOfDatabase = snapshot.numChildren();
+  console.log(sizeOfDatabase);
+  localStorage.numchildren = sizeOfDatabase;
+});
+
+
+//writeUserData("USA","800821222","msalad1","11/11/2017","3:00PM - 7:00PM","dsadasdsdd");
+var x = document.getElementById("submitForm");
+var host = document.getElementById("fname").value;
+//console.log("Host name is " +x.elements[0])
+console.log(localStorage.getItem("lastname") + " Should not be undefined");
+
+
+</script>
 </body>
 </html>
