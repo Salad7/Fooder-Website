@@ -1,0 +1,64 @@
+.body {
+	display: -webkit-flex;
+	align-content: center;
+    display: flex;
+    width: 450px;
+    height: 550px;
+	background-color: green;
+	background-repeat: 
+	padding: 10px 10px 10px 10px;
+	margin-top: 10px;
+	border-radius: 5px;
+}
+
+.main {
+	display: -webkit-flex;
+	align-items: center;
+    width: 425px;
+    height: 525px;
+	padding: 10px 10px 10px 10px;
+	margin-top: 10px;
+	background-color: #fffecc;
+	border-radius: 5px;
+	resize: vertical;
+}
+
+.styled {
+	text-align: right;
+	align-content: right;
+ 
+}
+
+.main form h1 {
+	font-family: Lobster;
+	font-size: 50px;
+	text-align: right;
+	font-weight: bold;
+}
+
+.describe {
+	width: 100%;
+    height: 60px;
+    padding: 15px 20px;
+    box-sizing: border-box;
+    resize: none;
+   	white-space: normal;
+    display: block;
+}
+fieldset {
+	font-size: 16px;
+	align-items: center;
+	padding: 2px 2px 2px 2px;
+}
+
+input {
+	width: 100%;
+    border: 1px solid;
+    border-radius: 4px;
+}
+
+input[type=submit] {
+	width: 30%;
+    border: 1px solid;
+    border-radius: 5px;
+}

@@ -1,31 +1,42 @@
 <!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
 <html>
 <body>
-
-<form action="/created.html">
-  <fieldset>
-    <legend>Event:</legend>
-    Host:<br>
-    <input type="text" name="firstname">
-    <br>
-    ID:<br>
-    <input type="text" name="lastname">
-    <br>
-    Location:<br>
-    <input type="text" name="lastname">
-    <br>
-    When:<br>
-    <input type="date" name="date">
-    <br>
-    Time:<br>
-    <input type="time" name="lastname">
-    <br>
-    Description:<br>
-    <input type="text" name="lastname">
-    <br>
-    <input type="submit" value="Submit">
-  </fieldset>
-</form>
-
+    <div class="body container-fluid">
+        <div class="container-fluid main center-block row">
+            <form action="/created.html">
+            <h1>Fooder</h1>
+              <fieldset>
+                <legend class="styled">Register an Event:</legend>
+                Host:<br>
+                <input type="text" name="firstname">
+                <br>
+                ID:<br>
+                <input type="text" name="ID">
+                <br>
+                Location:<br>
+                <input type="text" name="Location">
+                <br>
+                When:<br>
+                <input type="date" name="date">
+                <br>
+                Time:<br>
+                <input type="time" name="Time">
+                <br>
+                Description:<br>
+                <input class ="describe" type="text" name="lastname">
+                <br>
+                <input type="submit" value="Submit">
+              </fieldset>
+            </form>
+        </div>
+    </div>
 </body>
 </html>
