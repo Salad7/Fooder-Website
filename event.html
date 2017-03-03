@@ -1,0 +1,50 @@
+<html ng-app="calender">
+<html>
+
+    <head>
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="css/home.css">
+        <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src=”js/firebase.js”></script>
+    	<script src="/bower_components/angular/angular.js"></script>
+    	<link rel="stylesheet" href="bower_components/fullcalendar/dist/fullcalendar.css"/>
+	    <!-- jquery, moment, and angular have to get included before fullcalendar -->
+	    <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+	    <script type="text/javascript" src="bower_components/moment/min/moment.min.js"></script>
+	    <script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+	    <script type="text/javascript" src="bower_components/angular-ui-calendar/src/calendar.js"></script>
+	    <script type="text/javascript" src="bower_components/fullcalendar/dist/fullcalendar.min.js"></script>
+	    <script type="text/javascript" src="bower_components/fullcalendar/dist/gcal.js"></script>
+
+		
+		<script type="text/javascript" src="scripts/app.js"></script>
+	    <script src="https://www.gstatic.com/firebasejs/3.6.10/firebase-app.js"></script>
+	    <script src="https://www.gstatic.com/firebasejs/3.6.10/firebase-auth.js"></script>
+	    <script src="https://www.gstatic.com/firebasejs/3.6.10/firebase-database.js"></script>
+	    <script src="https://www.gstatic.com/firebasejs/3.6.10/firebase-messaging.js"></script>
+	    <script src="https://www.gstatic.com/firebasejs/3.6.10/firebase.js"></script>
+    </head>
+
+
+    <body>
+    	<div class="container-fluid body">
+    		<nav class="navbar" id="primary_nav" role="navigation">
+                <div class="container-fluid row center-block">
+                    <ul class="nav navbar-nav">
+                        <li><a href="event.html">Events</a></li>
+                        <li><a href="home.html">Register</a></li>
+                        <li><a href="#">Mobile</a></li>
+                    </ul>
+                </div>
+            </nav>
+
+    		<div class="main" ng-controller="calender">
+    			<div ui-calendar ng-model="eventSources"></div>
+    		</div>
+
+    	</div>
+
+    </body>
+
+ </html>

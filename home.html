@@ -1,52 +1,57 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/home.css">
-    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
+    <head>
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="css/home.css">
+        <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src=”js/writedata.js”></script>
+        <script src=”js/firebase.js”></script>
+        <script src="/bower_components/angular/angular.js"></script>
+        
+        <script src="https://www.gstatic.com/firebasejs/3.6.10/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/3.6.10/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/3.6.10/firebase-database.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/3.6.10/firebase-messaging.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/3.6.10/firebase.js"></script>
+    </head>
 
     <body>
         <div class="body container-fluid">
-            <div class="container-fluid main center-block row">
+
+            <nav class="navbar" id="primary_nav" role="navigation">
+                <div class="container-fluid row center-block">
+                    <ul class="nav navbar-nav">
+                        <li><a href="event.html">Events</a></li>
+                        <li><a href="home.html">Register</a></li>
+                        <li><a href="#">Mobile</a></li>
+                    </ul>
+                </div>
+            </nav>
+
+            <div class="container-fluid main center-block">
                 <form action="created.html" id="submitForm" onsubmit="return writeUserData()">
                 <h1>Fooder</h1><hr>
                   <fieldset>
                     <h2 class="styled">Register an Event:</h2>
                     Host:<br>
-                    <input type="text" name="firstname">
-                    <br>
+                    <input type="text" name="firstname" required><br>
                     ID:<br>
-                    <input type="text" name="ID">
-                    <br>
+                    <input type="text" name="ID" required><br>
                     Location:<br>
-                    <input type="text" name="Location">
-                    <br>
+                    <input type="text" name="Location" required><br>
                     When:<br>
-                    <input type="date" name="date">
-                    <br>
+                    <input type="date" name="date" required><br>
                     Time:<br>
-                    <input type="time" name="Time">
-                    <br>
+                    <input type="time" name="Time" required><br>
                     Description:<br>
-                    <input class ="describe" type="text" name="lastname">
-                    <br>
+                    <input placeholder="Describe your event..." class ="describe" type="text" name="Description"><br>
                     <input type="submit" value="Submit">
                   </fieldset>
                 </form>
             </div>
         </div>
     </body>
-
-    <script src=”js/writedata.js”></script>
-    <script src=”js/firebase.js”></script>
-
-    <script src="https://www.gstatic.com/firebasejs/3.6.10/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/3.6.10/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/3.6.10/firebase-database.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/3.6.10/firebase-messaging.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/3.6.10/firebase.js"></script>
 
 <html>

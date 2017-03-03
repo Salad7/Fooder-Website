@@ -50,10 +50,12 @@ input[type=submit] {
     background: #7D7D15;
     color: #FFFFFF; 
     font-weight: bold;
+    border-radius: 5px;
 }
 
 input[type=submit]:hover {
 	background: white;
 	color: #7D7D15;
 	font-weight: bold;
+	border-radius: 5px;
 }

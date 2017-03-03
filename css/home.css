@@ -3,19 +3,20 @@
 	align-content: center;
     display: flex;
     width: 425px;
-    height: 600px;
+    height: 675px;
 	background-color: green;
 	background-repeat: 
 	padding: 10px 10px 10px 10px;
 	margin-top: 10px;
 	border-radius: 5px;
+	box-shadow: 10px 10px 5px #888888;
 }
 
 .main {
 	display: -webkit-flex;
 	align-items: center;
     width: 400px;
-    height: 575px;
+    height: 650px;
 	padding: 10px 10px 10px 10px;
 	margin-top: 10px;
 	background-color: #fffecc;
@@ -35,9 +36,10 @@
 
 .main form h1 {
 	font-family: Lobster;
-	font-size: 50px;
+	font-size: 75px;
 	text-align: center;
 	font-weight: bold;
+	padding-top: 50px;
 }
 
 .main form h2 {
@@ -49,7 +51,7 @@
 
 .main form {
 	margin-left: 60px;
-	margin-right: -20px;
+	margin-right: -50px;
 }
 
 .describe {
@@ -61,6 +63,7 @@
    	white-space: normal;
     display: block;
 }
+
 fieldset {
 	font-size: 16px;
 	align-items: center;
@@ -77,10 +80,11 @@ input[type=submit] {
 	width: 30%;
     border: 1px solid;
     border-radius: 5px;
-    margin-bottom: 5px;
+    margin-left: -60px;
+    margin-top: -10px;
     padding-top: 5px;
     background: #7D7D15;
-    color: #FFFFFF; 
+    color: #FFFFFF;
     font-weight: bold;
 }
 
@@ -88,4 +92,32 @@ input[type=submit]:hover {
 	background: white;
 	color: #7D7D15;
 	font-weight: bold;
+	border-radius: 5px;
 }
+
+/*navigation*/ 
+#primary_nav ul {
+    list-style-type: none;
+}
+#primary_nav {
+    position: fixed;
+    border-radius: 5px;
+    padding-top: 22px;
+    padding-left: 25px;
+}
+#primary_nav li a {
+    display: inline;
+    color: #006600;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    line-height: 2em;
+}
+
+#primary_nav li a:hover,
+#primary_nav li a:focus {
+    color: #fffecc;
+    background: #006600;
+    border-radius: 5px;
+}
+
